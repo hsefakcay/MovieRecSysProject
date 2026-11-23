@@ -1,0 +1,31 @@
+data:
+  path: data/raw/ml-1m
+  test_ratio: 0.1
+  val_ratio: 0.1
+  min_interactions: 5
+  random_seed: 42
+
+stage1:
+  svd:
+    n_factors: 100
+    n_epochs: 20
+    lr_all: 0.005
+    reg_all: 0.02
+  cbf:
+    feature: genres
+  top_n_candidates: 100
+  candidate_sizes: [50, 100, 200]
+
+stage2:
+  ncf:
+    mf_dim: 64
+    mlp_layers: [256, 128, 64, 32]
+    dropout: 0.2
+    lr: 0.001
+    weight_decay: 1.0e-5
+    n_epochs: 20
+    batch_size: 1024
+    n_negatives: 4
+
+evaluation:
+  K_values: [5, 10, 20]

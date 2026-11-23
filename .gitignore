@@ -1,0 +1,39 @@
+# Data
+data/raw/
+data/processed/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# Environments
+venv/
+.env
+.venv
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Experiments
+experiments/results/*.json
+experiments/results/*.csv
+
+# Models (large files)
+*.pt
+*.pth
+*.pkl
